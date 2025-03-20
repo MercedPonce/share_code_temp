@@ -1,0 +1,60 @@
+Canal SR Ledwis
+
+Primero, quitar cualquier tipo de licencia instalada
+
+*******************
+
+cscript "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" /dstatus
+
+cscript "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" /dstatus
+
+
+Luego usamos para quitar la licencia la siguiente linea
+
+cscript "%ProgramFiles%\Microsoft Office\Office16\ospp.vbs" /unpkey:WFG99
+
+cscript "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" /unpkey:WFG99
+
+
+
+
+
+
+
+Luego descargar directamente de Microsoft
+****************************************
+
+https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117
+
+https://docs.microsoft.com/es-es/DeployOffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016?redirectedfrom=MSDN
+
+<Configuration>
+  <Add OfficeClientEdition="64">
+    <Product ID="ProPlus2019Volume">
+      <Language ID="es-es" />
+        
+      <ExcludeApp ID="Access" />
+      <ExcludeApp ID="InfoPath" />
+      <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="Project" />
+      <ExcludeApp ID="Publisher" />
+      <ExcludeApp ID="SharePointDesigner" />
+      <ExcludeApp ID="Visio" />
+      <ExcludeApp ID="Skype" />
+      <ExcludeApp ID="Skypeforbusiness" />
+      <ExcludeApp ID="Groove" />
+       
+    </Product>
+  </Add>
+  <Display Level="Full" AcceptEULA="TRUE" />
+</Configuration>
+
+
+Lanzar instalación:
+************************************************
+@echo off
+cd /d %~dp0
+setup.exe /configure set.xml
+pause
+
+
