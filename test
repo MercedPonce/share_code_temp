@@ -1,4 +1,3 @@
-Canal SR Ledwis
 
 Primero, quitar cualquier tipo de licencia instalada
 
@@ -17,11 +16,8 @@ cscript "%ProgramFiles(x86)%\Microsoft Office\Office16\ospp.vbs" /unpkey:WFG99
 
 
 
-
-
-
-
 Luego descargar directamente de Microsoft
+deployment tool
 ****************************************
 
 https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117
